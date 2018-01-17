@@ -1,0 +1,12 @@
+{
+    "jscodehints.detectedExclusions": [
+        "C:/Projetos/Js/Booker/platforms/android/build/intermediates/assets/debug/www/lib/angular/angular.min.js",
+        "C:/Projetos/Js/Booker/platforms/android/build/intermediates/assets/debug/www/lib/ionic/js/ionic.min.js",
+        "C:/Projetos/Js/Booker/platforms/android/build/intermediates/assets/debug/www/lib/angular-pdf.js",
+        "C:/Projetos/Js/Booker/www/js/controllers/conteudolivro.js",
+        "C:/Projetos/Js/Booker/www/lib/ionic/js/ionic.min.js",
+        "C:/Projetos/Js/Booker/platforms/android/build/intermediates/assets/debug/www/lib/ionic/js/angular/angular-animate.js",
+        "C:/Projetos/Js/Booker/platforms/android/build/intermediates/assets/debug/www/lib/ionic/js/angular/angular-animate.min.js",
+        "C:/Projetos/Js/Booker/platforms/android/build/intermediates/assets/debug/www/lib/ionic/js/angular/angular-resource.js"
+    ]
+}

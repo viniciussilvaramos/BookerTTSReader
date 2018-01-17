@@ -1,0 +1,17 @@
+<ion-view view-title="Minhas Leituras">
+  <ion-content class="padding">
+    <p ng-show="!livros || livros.length <= 0">Não há leituras recentes.</p>
+  	<ion-list>
+  		<ion-item ng-repeat="livro in livros track by $index" ng-if="livro.Extensao !== '.pdf'" ui-sref="tab.conteudoLivroLeitura({tituloLivro:livro.Titulo})">
+	  		<p class="titulo">{{livro.Titulo}}</p>
+	  		<p>{{livro.Caminho}}</p>
+            <p style="font-size:10px !important;">Vezes acessado: {{livro.VezesLido}}</p>
+		</ion-item>
+        <ion-item ng-repeat="livro in livros track by $index" ng-if="livro.Extensao === '.pdf'" ui-sref="tab.conteudoLivroPdfLeitura({tituloLivro:livro.Titulo})">
+            <p class="titulo">{{livro.Titulo}}</p>
+            <p>{{livro.Caminho}}</p>
+            <p style="font-size:10px !important;">Vezes acessado: {{livro.VezesLido}}</p>
+        </ion-item>
+	</ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,26 @@
+<ion-view view-title="{{Titulo}}">
+    <ion-nav-buttons side="secondary">
+      	<button class="button button-icon icon ion-gear-a"  ng-click="opcoes()"></button>
+    </ion-nav-buttons>
+    <ion-content class="padding" on-swipe-left="proximo(true)" on-swipe-right="anterior(true)">
+        <section id="textLayer">
+    		<p ng-repeat="paragrafo in paragrafos track by $index" class="paragrafo {{paragrafo.classe}} {{config.tamanhoTexto}}" style="text-align: {{config.alinhamento}}">
+    			<span ng-repeat="linha in paragrafo.linhas track by $index" class="{{linha.classe}}" ng-click="leia(paragrafo.classe,linha.classe)">{{linha.texto}}</span>
+    		</p>
+		</section>
+    </ion-content>
+    <ion-footer-bar class="bar-energized">
+		<div class="buttons">
+			<button class="button button-icon icon ion-ios-arrow-back" ng-click="anterior(true)"></button>
+		</div>
+		<div class="title" style="top: 5px;">
+			<button class="button button-icon icon ion-play" ng-click="leia()"></button>
+			<button class="button button-icon icon ion-pause" ng-click="pare()"></button>
+			<button class="button button-icon icon ion-ios-skipbackward" ng-click="anterior()"></button>
+			<button class="button button-icon icon ion-ios-skipforward" ng-click="proximo()"></button>			
+		</div>
+		<div class="buttons">			
+			<button class="button button-icon icon ion-ios-arrow-forward" ng-click="proximo(true)"></button>
+		</div>
+	</ion-footer-bar>
+</ion-view>

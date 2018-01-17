@@ -1,0 +1,17 @@
+<ion-view view-title="Meus Livros">
+    <ion-content class="padding">
+        <p ng-show="!items || items.length <= 0">Não encontramos nenhum livro.</p>
+        <ion-list>
+            <ion-item ng-repeat="item in items track by $index" ng-if="item.Extensao !== '.pdf'" ui-sref="tab.conteudoLivroTodos({tituloLivro:item.Titulo})">
+                <p class="titulo">{{item.Titulo}}</p>
+                <p>{{item.Caminho}}</p>
+                <p style="font-size:10px !important;">Arquivo {{item.Extensao}}</p>
+            </ion-item>
+            <ion-item ng-repeat="item in items track by $index" ng-if="item.Extensao === '.pdf'" ui-sref="tab.conteudoLivroPdfTodos({tituloLivro:item.Titulo})">
+                <p class="titulo">{{item.Titulo}}</p>
+                <p>{{item.Caminho}}</p>
+                <p style="font-size:10px !important;">Arquivo {{item.Extensao}}</p>
+            </ion-item>            
+        </ion-list>
+    </ion-content>
+</ion-view>

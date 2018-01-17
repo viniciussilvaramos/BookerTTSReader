@@ -1,0 +1,62 @@
+<div class="modal">
+    <ion-header-bar class="bar bar-header bar-energized">
+      <h1 class="title">Opções</h1>
+      <div class="button button-clear" ng-click="modal.hide()">
+			<span class="icon ion-close"></span>
+		</div>
+    </ion-header-bar>
+    <ion-content class="padding">
+      <div class="list">
+        <label class="item">
+          <span class="input-label">Velocidade: {{config.rate}}</span>
+        </label>
+        <label class="item range range-positive">
+          <input type="range" ng-model="config.rate" min="1" max="10">
+        </label>
+        <label class="item">
+          <span class="input-label">Palavras por Leitura: {{config.agrupamento}}</span>
+        </label>
+        <label class="item range range-positive">
+          <input type="range" ng-model="config.agrupamento" min="1" max="10">
+        </label>
+        <label class="item">
+          <span class="input-label">Pagina Atual: {{config.paginaAtual}}</span>
+        </label>
+        <label class="item range range-positive">
+          <input type="range" ng-model="config.paginaAtual" min="1" max="100">
+        </label>
+        <label class="item">
+          <span class="input-label">Palavras por Parágrafo: {{config.quantidadePalavras}}</span>
+        </label>
+        <label class="item range range-positive">
+          <input type="range" ng-model="config.quantidadePalavras" min="1" max="50">
+        </label>
+        <label class="item item-input item-select">
+          <span class="input-label">Idioma</span>
+          <select ng-model="config.idioma">
+          	<option>pt-BR</option>	
+          	<option>en-US</option>
+          </select>
+        </label>
+        <label class="item item-input item-select">
+          <span class="input-label">Tamanho do Texto:</span>
+          <select ng-model="config.tamanhoTexto" class="{{config.tamanhoTexto}}">
+          	<option value="c14" class="c14">Pequeno</option>	
+          	<option value="c16" class="c16">Médio</option>	
+          	<option value="c18" class="c18">Grande</option>
+          	<option value="c20" class="c20">Muito Grande</option>
+          </select>
+        </label>
+        <label class="item item-input item-select">
+          <span class="input-label">Alinhamento:</span>
+          <select ng-model="config.alinhamento" style="text-align:{{config.alinhamento}}">
+            <option value="left">Esquerda</option>    
+            <option value="justify">Justificado</option>
+            <option value="center">Centro</option>
+            <option value="right">Direita</option>        
+          </select>
+        </label>
+        <button class="button button-block button-energized" ng-click="modal.hide()"> Fechar </button>
+      </div>
+    </ion-content>
+ </div>

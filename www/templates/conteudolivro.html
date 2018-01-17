@@ -1,0 +1,12 @@
+<ion-view view-title="{{Titulo}}" hide-tabs>
+	<ion-nav-buttons side="secondary">
+      	<button class="button button-icon icon ion-play"  ng-click="leia()"></button>
+      	<button class="button button-icon icon ion-pause"  ng-click="pare()"></button>
+      	<button class="button button-icon icon ion-gear-a"  ng-click="opcoes()"></button>      	
+    </ion-nav-buttons>
+	<ion-content class="padding conteudoLivro">
+        <p ng-repeat="paragrafo in conteudo track by $index" class="paragrafo p{{$index}} {{config.tamanhoTexto}}" ng-click="leia({texto:paragrafo})">
+            {{paragrafo}}
+        </p>
+	</ion-content>
+</ion-view>
